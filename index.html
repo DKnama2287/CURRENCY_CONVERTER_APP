@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div>
+            <h1>Currency Converter</h1>
+        </div>
+        <div id="amount">
+            <p>Enter amount</p>
+            <input type="text" value="1">
+        </div>
+    <div class="container">
+            <div class="dropdown" id="fromto">
+                <p>From</p>
+                <p>To</p>
+            </div>
+            <div class="dropdown">
+                <div id="frimg">
+                    <img  src="https://flagsapi.com/US/flat/64.png">
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+               <div id="toimg">
+                   <img src="https://flagsapi.com/IN/flat/64.png">
+               </div>
+            </div>
+            <div class="dropdown" id="curr">
+                <select name="from">
+                    <!-- <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="INR">INR</option>
+                    <option value="EUP">EUP</option> -->
+                </select>
+                <select name="to">
+                    <!-- <option value="INR">INR</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="EUP">EUP</option> -->
+                </select>  
+            </div>                        
+    </div>
+            <div id="convert">
+                <p >1 USD = 83 INR</p>
+                    <button>
+                        <p>Get Exchange Rate</p>
+                    </button>
+            </div>
+</form>
+    
+</body>
+        <script src="codes.js"></script>
+        <script src="app.js"></script>
+</html>
