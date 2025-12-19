@@ -3,57 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency converter</title>
+    <title>Currency Converter - Real-Time Exchange Rates</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <div>
-            <h1>Currency Converter</h1>
-        </div>
-        <div id="amount">
-            <p>Enter amount</p>
-            <input type="text" value="1">
-        </div>
-    <div class="container">
-            <div class="dropdown" id="fromto">
-                <p>From</p>
-                <p>To</p>
-            </div>
-            <div class="dropdown">
-                <div id="frimg">
-                    <img  src="https://flagsapi.com/US/flat/64.png">
-                </div>
-                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-               <div id="toimg">
-                   <img src="https://flagsapi.com/IN/flat/64.png">
-               </div>
-            </div>
-            <div class="dropdown" id="curr">
-                <select name="from">
-                    <!-- <option value="USD">USD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="INR">INR</option>
-                    <option value="EUP">EUP</option> -->
-                </select>
-                <select name="to">
-                    <!-- <option value="INR">INR</option>
-                    <option value="USD">USD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="EUP">EUP</option> -->
-                </select>  
-            </div>                        
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <!-- Gradient Orbs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <!-- Geometric Shapes -->
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-square"></div>
+        <div class="shape shape-triangle"></div>
+        
+        <!-- Animated Lines -->
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
+        
+        <!-- Floating Particles -->
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        <div class="bg-particle"></div>
+        
+        <!-- Wave Animation -->
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+        
+        <!-- Grid Pattern -->
+        <div class="grid-pattern"></div>
     </div>
-            <div id="convert">
-                <p >1 USD = 83 INR</p>
-                    <button>
-                        <p>Get Exchange Rate</p>
-                    </button>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Decorative Elements -->
+        <div class="particle particle-1">✨</div>
+        <div class="particle particle-2">💫</div>
+        <div class="particle particle-3">⭐</div>
+        <div class="particle particle-4">💰</div>
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="icon-container">
+                <i class="fas fa-coins"></i>
             </div>
-</form>
-    
+            <h1>Currency Converter</h1>
+            <p class="subtitle">Real-time exchange rates at your fingertips</p>
+        </div>
+
+        <!-- Converter Form -->
+        <form>
+            <!-- Amount Input Section -->
+            <div class="input-section">
+                <label for="amount-input">
+                    <i class="fas fa-dollar-sign"></i>
+                    Enter Amount
+                </label>
+                <div class="amount-wrapper">
+                    <input 
+                        type="number" 
+                        id="amount-input" 
+                        value="1" 
+                        min="0" 
+                        step="0.01"
+                        placeholder="Enter amount"
+                    >
+                </div>
+            </div>
+
+            <!-- Currency Selection Container -->
+            <div class="currency-container">
+                <!-- From Currency -->
+                <div class="currency-box">
+                    <label>From</label>
+                    <div class="select-wrapper">
+                        <div class="flag-container" id="frimg">
+                            <img src="https://flagsapi.com/US/flat/64.png" alt="Country flag">
+                        </div>
+                        <select name="from" class="currency-select">
+                            <!-- Options populated by JavaScript -->
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
+                    </div>
+                </div>
+
+                <!-- Swap Button -->
+                <button type="button" class="swap-btn" id="swap-currencies">
+                    <i class="fas fa-arrow-right-arrow-left"></i>
+                </button>
+
+                <!-- To Currency -->
+                <div class="currency-box">
+                    <label>To</label>
+                    <div class="select-wrapper">
+                        <div class="flag-container" id="toimg">
+                            <img src="https://flagsapi.com/IN/flat/64.png" alt="Country flag">
+                        </div>
+                        <select name="to" class="currency-select">
+                            <!-- Options populated by JavaScript -->
+                        </select>
+                        <i class="fas fa-chevron-down select-arrow"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exchange Rate Display -->
+            <div class="rate-display" id="convert">
+                <div class="rate-info">
+                    <i class="fas fa-chart-line"></i>
+                    <p class="rate-text">1 USD = 83 INR</p>
+                </div>
+            </div>
+
+            <!-- Convert Button -->
+            <button type="submit" class="convert-btn">
+                <span>Get Exchange Rate</span>
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </form>
+
+        <!-- Footer Info -->
+        <div class="footer-info">
+            <p>
+                <i class="fas fa-info-circle"></i>
+                Live exchange rates updated every minute
+            </p>
+        </div>
+    </div>
 </body>
-        <script src="codes.js"></script>
-        <script src="app.js"></script>
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
 </html>
